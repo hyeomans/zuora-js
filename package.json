@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "publish": "np"
+    "np": "np"
   },
   "author": {
     "name": "Hector Yeomans",

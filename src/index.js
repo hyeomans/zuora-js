@@ -15,7 +15,8 @@ function zuora (baseURL, clientId, clientSecret) {
   const bearerProvider = bearerTokenProvider(oauth)
   return {
     oauth,
-    actions: require('./actions')(axiosInstance, bearerProvider)
+    actions: require('./actions')(axiosInstance, bearerProvider),
+    describe: require('./describe')(axiosInstance, bearerProvider)
   }
 }
 

@@ -5,9 +5,13 @@ module.exports = {
     node: true,
     jest: true
   },
+  parser: '@typescript-eslint/parser',
   extends: [
-    'standard'
+    'standard',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
+  plugins: ['@typescript-eslint'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'

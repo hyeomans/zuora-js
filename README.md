@@ -8,12 +8,12 @@ $> npm i zuora-js
 ## Usage
 
 ```
-const zuora = require('zuora-js')
+const { zuoraApi } = require('zuora-js')
 const clientId = 'your-client-id'
 const clientSecret = 'your-client-secret'
-const api = zuora('https://rest.apisandbox.zuora.com', clientId, clientSecret)
+const zuora = zuoraApi('https://rest.apisandbox.zuora.com', clientId, clientSecret)
 
-api.actions.query('select id, name from Product', {}, 3)
+zuora.v1.action.query('select id, name from Product', 3, {"Zuora-Track-Id": "trackid"})
   .then(console.log)
   .catch(r => console.error(r.response.data))
 ```
